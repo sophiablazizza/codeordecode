@@ -31,24 +31,16 @@ form {
     justify-content: center;
 }
 
-.incrementoCesar {
-    display: flex;
+#incremento {
     flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .input {
     width:30%;
 }
 
-#botao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    width: 15%;
-    border-radius: 5px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    margin: 15px;
+#label64 {
+    margin-bottom: 20px;
 }

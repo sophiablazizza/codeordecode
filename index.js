@@ -16,9 +16,8 @@ function opcoesCifra() {
 }
 
 //Código Cesar
-
-function codCesar(arr, key){
-    return arr.map((c)=>{
+function codCesar(array, key){
+    return array.map((c)=>{
         let code = c.charCodeAt();
         if(code >= 65 && code <= 90){
             return String.fromCharCode(((code - 65 + key) % 26) + 65)
@@ -28,8 +27,8 @@ function codCesar(arr, key){
     }).join('')    
 }
 
-function decodCesar(arr, key){
-    return arr.map((c)=>{
+function decodCesar(array, key){
+    return array.map((c)=>{
         let code = c.charCodeAt();
         if(code >= 65 && code <= 90){
             return (code-65-key < 0)?String.fromCharCode(((code - 65 - key + 26)%26)+65):String.fromCharCode(((code - 65 - key)%26)+65) 
@@ -40,13 +39,11 @@ function decodCesar(arr, key){
 }
 
 // Base 64
-
 function base64 (input, decisao) {
     return (decisao)? btoa(input) : atob(input)
 }
 
-//Codificar/Decodificar
-
+//Codificar e Decodificar
 escolhaCifra.addEventListener('change',()=>{
     (escolhaCifra.value == "base64")? base64() : cesar(); 
 });
